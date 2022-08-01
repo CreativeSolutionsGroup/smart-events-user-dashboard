@@ -1,8 +1,16 @@
 #root {
-  max-width: 1280px;
+  min-height: 100vh;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+  /*padding: 2rem;*/
   text-align: center;
+
+  /* For Card Setup */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .logo {

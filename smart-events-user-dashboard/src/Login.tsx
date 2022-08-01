@@ -1,34 +1,54 @@
 import * as React from 'react';
+import './App.css'
 import {
-  Container, 
+  Box,
   Avatar, 
   TextField, 
-  Button 
+  Button,
+  Card,
+  CardMedia, 
+  Typography,
 } from '@mui/material';
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
+import { 
+  flexbox,
+  spacing,
+} from '@mui/system';
 
 function Login() {
-
   return (
-    <div className="Login">
-      <Container>
-        <Avatar 
-          alt="Yellow Jacket Logo"
-          src="/src/assets/yellow-jacket-logo.png"
-          variant="square"
+    <Card
+      sx={{
+        p: 5,
+        height: 350,
+        display: 'flex',
+        flexDirection: 'column',
+        flexwrap: 'nowrap',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+      }}>
+      <Box sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+        <CardMedia
+          component='img'
+          image='/src/assets/yellow-jacket-logo.png'
+          alt='Yellow Jacket Logo'
           sx={{
-            width: 200,
-            height: 200,
+            width: 100,
+            height: 100,
           }}
-          />
-        <h1>Enter ID to continue</h1>
-        <TextField />
-        <Button>click me</Button>
-      </Container>
-    </div>
+        />
+      <Typography variant='h5' sx={{m: 1}}>
+        Dashboard Login
+      </Typography>
+      </Box>
+      <Box sx={{display: 'flex', flexDirection: 'column', alignItems: 'flex-end'}}>
+        <TextField variant='outlined' label='Student ID'/>
+        <Button sx={{m: 1}}>Login</Button>
+      </Box>
+    </Card>
   )
 }
 
