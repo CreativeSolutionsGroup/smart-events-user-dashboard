@@ -17,8 +17,22 @@ import {
   flexbox,
   spacing,
 } from '@mui/system';
+import axios from 'axios';
+import { useState } from 'react';
+import { CheckIn } from './models/checkin';
 
 function Login() {
+  const [stuID, setStuID] = useState("");
+  
+  const matchEvents = async () => {
+    let allCheckIns:Array<CheckIn> = (await axios.get("http://localhost:3001/v1/checkin")).data;
+    console.log(allCheckIns);
+    const matchEvents = allCheckIns.filter((checkIn) => {
+        return stuID === checkIn.student_id;
+    })
+    console.log(matchEvents);  
+  }
+
   return (
     <Card
       sx={{
@@ -45,11 +59,12 @@ function Login() {
       </Typography>
       </Box>
       <Box sx={{display: 'flex', flexDirection: 'column', alignItems: 'flex-end'}}>
-        <TextField variant='outlined' label='Student ID'/>
-        <Button sx={{m: 1}}>Login</Button>
+        <TextField variant='outlined' label='Student ID' onInput={ (evt:any) => setStuID(evt.target.value)}/>
+        <Button sx={{m: 1}} onClick={() => matchEvents()}>Login</Button>
       </Box>
     </Card>
   )
 }
 
 export default Login
+
