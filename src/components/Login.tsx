@@ -1,5 +1,4 @@
 import * as React from 'react';
-import './App.css'
 import {
   Box,
   Avatar, 
@@ -19,18 +18,15 @@ import {
 } from '@mui/system';
 import axios from 'axios';
 import { useState } from 'react';
-import { CheckIn } from './models/checkin';
+import { CheckIn } from '../models/checkin';
+import { get_all_checkins_for_student } from '../services/CheckIn';
 
-function Login() {
-  const [stuID, setStuID] = useState("");
+function Login({set_student_checkins}: React.PropsWithChildren<{set_student_checkins: Function}>) {
+  const [stu_id, set_stu_id] = useState("");
   
-  const matchEvents = async () => {
-    let allCheckIns:Array<CheckIn> = (await axios.get("http://localhost:3001/v1/checkin")).data;
-    console.log(allCheckIns);
-    const matchEvents = allCheckIns.filter((checkIn) => {
-        return stuID === checkIn.student_id;
-    })
-    console.log(matchEvents);  
+  const match_events_to_student = async () => {
+    const matchEvents = await get_all_checkins_for_student(stu_id);
+    set_student_checkins(matchEvents);
   }
 
   return (
@@ -59,8 +55,8 @@ function Login() {
       </Typography>
       </Box>
       <Box sx={{display: 'flex', flexDirection: 'column', alignItems: 'flex-end'}}>
-        <TextField variant='outlined' label='Student ID' onInput={ (evt:any) => setStuID(evt.target.value)}/>
-        <Button sx={{m: 1}} onClick={() => matchEvents()}>Login</Button>
+        <TextField variant='outlined' label='Student ID' onInput={ (evt:any) => set_stu_id(evt.target.value)}/>
+        <Button sx={{m: 1}} onClick={() => match_events_to_student()}>Login</Button>
       </Box>
     </Card>
   )
