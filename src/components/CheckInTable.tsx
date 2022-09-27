@@ -1,30 +1,23 @@
 import { Tab } from "@mui/icons-material"
 import { Table, TableBody, TableCell, TableHead, TableRow } from "@mui/material"
 import { CheckIn } from "../models/checkin"
+import { CheckInRow } from "./CheckIn"
 
-function CheckInTable({ all_checkins }: React.PropsWithChildren<{ all_checkins: Array<CheckIn> }>) {
+function CheckInTable({ checkins }: React.PropsWithChildren<{ checkins: Array<CheckIn> }>) {
   return (
     <Table>
       <TableHead>
         <TableRow >
           <TableCell>
-            Event:
+            Event
           </TableCell>
           <TableCell>
-            Time:
+            Time
           </TableCell>
         </TableRow>
       </TableHead>
       <TableBody>
-        {all_checkins.map(checkin => { return (
-        <TableRow>
-          <TableCell>
-
-          </TableCell>
-          <TableCell>
-            {(new Date(checkin.created)).toDateString()}
-          </TableCell>
-        </TableRow>) })}
+        {checkins.map((checkin, i) => <CheckInRow key={i} checkin={checkin} />)}
       </TableBody>
     </Table>
   )

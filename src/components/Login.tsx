@@ -1,32 +1,32 @@
 import * as React from 'react';
 import {
   Box,
-  Avatar, 
-  TextField, 
+  Avatar,
+  TextField,
   Button,
   Card,
-  CardMedia, 
+  CardMedia,
   Typography,
 } from '@mui/material';
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
-import { 
+import {
   flexbox,
   spacing,
 } from '@mui/system';
 import axios from 'axios';
 import { useState } from 'react';
 import { CheckIn } from '../models/checkin';
-import { get_all_checkins_for_student } from '../services/CheckIn';
+import { get_all_checkins_by_id } from '../services/CheckIn';
 
-function Login({set_student_checkins}: React.PropsWithChildren<{set_student_checkins: Function}>) {
+function Login({ set_checkins }: React.PropsWithChildren<{ set_checkins: Function }>) {
   const [stu_id, set_stu_id] = useState("");
-  
+
   const match_events_to_student = async () => {
-    const matchEvents = await get_all_checkins_for_student(stu_id);
-    set_student_checkins(matchEvents);
+    const matchEvents = await get_all_checkins_by_id(stu_id);
+    set_checkins(matchEvents);
   }
 
   return (
@@ -40,7 +40,7 @@ function Login({set_student_checkins}: React.PropsWithChildren<{set_student_chec
         justifyContent: 'space-between',
         alignItems: 'center',
       }}>
-      <Box sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+      <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <CardMedia
           component='img'
           image='/src/assets/yellow-jacket-logo.png'
@@ -50,13 +50,13 @@ function Login({set_student_checkins}: React.PropsWithChildren<{set_student_chec
             height: 100,
           }}
         />
-      <Typography variant='h5' sx={{m: 1}}>
-        Dashboard Login
-      </Typography>
+        <Typography variant='h5' sx={{ m: 1 }}>
+          Dashboard Login
+        </Typography>
       </Box>
-      <Box sx={{display: 'flex', flexDirection: 'column', alignItems: 'flex-end'}}>
-        <TextField variant='outlined' label='Student ID' onInput={ (evt:any) => set_stu_id(evt.target.value)}/>
-        <Button sx={{m: 1}} onClick={() => match_events_to_student()}>Login</Button>
+      <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }}>
+        <TextField variant='outlined' label='Student ID' onInput={(evt: any) => set_stu_id(evt.target.value)} />
+        <Button sx={{ m: 1 }} onClick={() => match_events_to_student()}>Login</Button>
       </Box>
     </Card>
   )
