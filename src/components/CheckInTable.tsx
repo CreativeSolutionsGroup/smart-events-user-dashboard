@@ -8,12 +8,14 @@ function CheckInTable({ checkins }: React.PropsWithChildren<{ checkins: Array<Ch
     <Table>
       <TableHead>
         <TableRow >
-          <TableCell>
-            Event
-          </TableCell>
-          <TableCell>
-            Time
-          </TableCell>
+            <TableCell>
+              Event
+            </TableCell>
+          </TableRow>
+          <TableRow >
+            <TableCell>
+              Time
+            </TableCell>
         </TableRow>
       </TableHead>
       <TableBody>

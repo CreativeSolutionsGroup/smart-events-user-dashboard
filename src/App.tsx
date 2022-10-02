@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <Login set_checkins={set_checkins} />
 
-      <Typography>
+      <Typography sx={{mt: 5}}>
         Check In
       </Typography>
       <CheckInTable checkins={checkins} />
