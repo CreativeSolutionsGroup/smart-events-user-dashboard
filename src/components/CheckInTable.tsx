@@ -9,12 +9,12 @@ function CheckInTable({ checkins }: React.PropsWithChildren<{ checkins: Array<Ch
       <TableHead>
         <TableRow >
             <TableCell>
-              Event
+              Event:
             </TableCell>
           </TableRow>
           <TableRow >
             <TableCell>
-              Time
+              Time:
             </TableCell>
         </TableRow>
       </TableHead>
