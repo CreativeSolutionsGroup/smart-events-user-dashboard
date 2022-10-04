@@ -8,16 +8,15 @@ import {
   Typography
 } from '@mui/material'
 import AspectRatio from '@mui/joy/AspectRatio';
-import './App.css'
-import '@fontsource/roboto/300.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
+import '@fontsource/roboto/300.css'; // Used by MUI?
+import '@fontsource/roboto/400.css'; // "           "
+import '@fontsource/roboto/500.css'; // "           "
+import '@fontsource/roboto/700.css'; // "           "
 
 function Dashboard() {
   return (
     <div className="Dashboard">
-      <Box className='background' sx={{
+      <Box className='background bg-green-400'  sx={{
         width: '100vw',
         //alignItems: 'center'              // TODO: only used for flexboxes, tried to use as a substitute for margin: auto. Which is preferred?
       }}>
@@ -31,7 +30,7 @@ function Dashboard() {
           justifyContent: 'space-evenly',   // TODO: not working
           alignContent: 'center'
         }}>
-          <Box className='status' sx={{
+          <Box className='status ' sx={{
             height: 600,                    // TODO: fix so height is not static
             display: 'flex',
             flexDirection: 'column',
@@ -59,8 +58,8 @@ function Dashboard() {
                 justifyContent: 'space-evenly'
               }}>
                 <Typography sx={{
-                  textTransform: 'uppercase',
-                  fontWeight: 'bold'
+                  //textTransform: 'uppercase',     // TODO: testing tailwind
+                  //fontWeight: 'bold'
                 }} >Gold</Typography>
                 <Typography sx={{
                   //mt: 'auto'

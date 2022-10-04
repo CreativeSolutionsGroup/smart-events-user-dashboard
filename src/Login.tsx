@@ -1,5 +1,4 @@
 import * as React from 'react';
-import './App.css'
 import {
   Box,
   Avatar, 
@@ -9,10 +8,10 @@ import {
   CardMedia, 
   Typography,
 } from '@mui/material';
-import '@fontsource/roboto/300.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
+import '@fontsource/roboto/300.css'; // Used by MUI?
+import '@fontsource/roboto/400.css'; // "           "
+import '@fontsource/roboto/500.css'; // "           "
+import '@fontsource/roboto/700.css'; // "           "
 import { 
   flexbox,
   spacing,
