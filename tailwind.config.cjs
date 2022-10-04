@@ -1,10 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/main.tsx", 
-            "./src/Login.tsx",
-            "./src/Dashboard.tsx",
-            "./src/App.tsx"],
-  important: '#root',
+  content: ["./src/**/*.tsx",
+            "./index.html"],
   theme: {
     extend: {},
   },
