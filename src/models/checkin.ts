@@ -5,3 +5,9 @@ export interface CheckIn {
     // A string that represents a unix timestamp. (Cast to number)
     created: string
 }
+
+export interface Event {
+    id: string,
+    alias: string,
+    created: Date
+}
