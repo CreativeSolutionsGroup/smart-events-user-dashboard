@@ -12,12 +12,12 @@ export const CheckInRow = ({ checkin }: PropsWithChildren<{ checkin: CheckIn }>)
       set_the_event(match_events_to_checkin);
   }
 
-  // useEffect(() => get_all_events(), []);
+  useEffect(() => get_all_events(), []);
 
   return (
       <TableRow>
         <TableCell>
-          <Typography>{/*the_event.alias*/}</Typography>
+          <Typography>{the_event?.alias ?? ""}</Typography>
         </TableCell>
         <TableCell>
           <Typography>{(new Date(+checkin.created)).toDateString()}</Typography>
