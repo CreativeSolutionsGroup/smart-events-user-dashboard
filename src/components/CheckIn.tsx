@@ -3,21 +3,11 @@ import axios from "axios"
 import { PropsWithChildren, useEffect, useState } from "react"
 import { CheckIn, Event } from "../models/checkin"
 
-export const CheckInRow = ({ checkin }: PropsWithChildren<{ checkin: CheckIn }>) => {   
-  const [the_event, set_the_event] = useState<Event>();
-
-  const get_all_events = async () => {
-      let all_events: Array<Event> = (await axios.get("http://localhost:3001/v1/event")).data;
-      const match_events_to_checkin = all_events.find((event) => event.id == checkin.event)
-      set_the_event(match_events_to_checkin);
-  }
-
-  useEffect(() => { get_all_events() }, []);
-
+export const CheckInRow = ({ checkin, event_alias }: PropsWithChildren<{ checkin: CheckIn, event_alias: string }>) => {   
   return (
       <TableRow>
         <TableCell>
-          <Typography>{the_event?.alias ?? ""}</Typography>
+          <Typography>{event_alias ?? ""}</Typography>
         </TableCell>
         <TableCell>
           <Typography>{(new Date(+checkin.created)).toDateString()}</Typography>
