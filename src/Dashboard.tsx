@@ -16,7 +16,7 @@ import '@fontsource/roboto/700.css'; // "           "
 function Dashboard() {
   return (
     <div className="Dashboard">
-      <Box className='background bg-green-400'  sx={{
+      <Box className='background bg-orange-400'  sx={{
         width: '100vw',
         //alignItems: 'center'              // TODO: only used for flexboxes, tried to use as a substitute for margin: auto. Which is preferred?
       }}>

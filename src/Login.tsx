@@ -19,33 +19,21 @@ import {
 
 function Login() {
   return (
-    <Card
-      sx={{
-        p: 5,
-        height: 350,
-        display: 'flex',
-        flexDirection: 'column',
-        flexwrap: 'nowrap',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-      }}>
-      <Box sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-        <CardMedia
+    <Card className="p-2 h-80 flex flex-col flex-nowrap justify-between items-center">
+      <Box className="flex flex-col items-center">
+        <Box
+          className="h-24"
           component='img'
-          image='/src/assets/yellow-jacket-logo.png'
+          src='/src/assets/yellow-jacket-logo.png'
           alt='Yellow Jacket Logo'
-          sx={{
-            width: 100,
-            height: 100,
-          }}
         />
-      <Typography variant='h5' sx={{m: 1}}>
+      <Typography variant='h5'>
         Dashboard Login
       </Typography>
       </Box>
-      <Box sx={{display: 'flex', flexDirection: 'column', alignItems: 'flex-end'}}>
+      <Box className="flex flex-col items-end">
         <TextField variant='outlined' label='Student ID'/>
-        <Button sx={{m: 1}}>Login</Button>
+        <Button className="my-3">Login</Button>
       </Box>
     </Card>
   )
