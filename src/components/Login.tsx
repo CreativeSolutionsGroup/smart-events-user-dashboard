@@ -21,7 +21,7 @@ import { useState } from 'react';
 import { CheckIn } from '../models/checkin';
 import { get_all_checkins_by_id } from '../services/CheckIn';
 
-function Login({ set_checkins }: React.PropsWithChildren<{ set_checkins: Function }>) {
+const Login = ({ set_checkins }: React.PropsWithChildren<{ set_checkins: Function }>) => {
   const [stu_id, set_stu_id] = useState("");
 
   const match_events_to_student = async () => {

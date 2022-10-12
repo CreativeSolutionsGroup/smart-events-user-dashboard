@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { CheckIn, Event } from "../models/checkin"
 import { CheckInRow } from "./CheckIn"
 
-function CheckInTable({ checkins }: React.PropsWithChildren<{ checkins: Array<CheckIn> }>) {
+const CheckInTable = ({ checkins }: React.PropsWithChildren<{ checkins: Array<CheckIn> }>) => {
   const [all_events, set_all_events] = useState<Array<Event>>();
 
   const get_all_events = async () => {
