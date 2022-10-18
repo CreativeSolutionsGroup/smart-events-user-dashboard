@@ -13,70 +13,27 @@ import '@fontsource/roboto/400.css'; // "           "
 import '@fontsource/roboto/500.css'; // "           "
 import '@fontsource/roboto/700.css'; // "           "
 
+// TODO: for some reason margins only work half the time
+// TODO: fix reward box height, figure out how to make it big but not static
 function Dashboard() {
   return (
-    <div className="Dashboard">
-      <Box className='background bg-orange-400'  sx={{
-        width: '100vw',
-        //alignItems: 'center'              // TODO: only used for flexboxes, tried to use as a substitute for margin: auto. Which is preferred?
-      }}>
-        <Box className='content' sx={{      // TODO: is content a reserved keyword? can i use that className?
-          width: 2/3,
-          m: '2rem',
-          mx: 'auto',                       // TODO: see line 22 comment
-          display: 'flex',
-          flexDirection: 'column',
-          flexWrap: 'nowrap',
-          justifyContent: 'space-evenly',   // TODO: not working
-          alignContent: 'center'
-        }}>
-          <Box className='status ' sx={{
-            height: 600,                    // TODO: fix so height is not static
-            display: 'flex',
-            flexDirection: 'column',
-            flexWrap: 'nowrap',
-            justifyContent: 'center',
-            alignItems: 'center',
-            bgcolor: 'lightgoldenrodyellow',
-            borderRadius: 10,
-            mb: '2rem',
-          }}>
-            <AspectRatio ratio="1/1" sx={{
-              width: '50vw',
-              mb: '2rem'
-            }}>
-              <Avatar className='status_display' sx={{
-                //width: 1,
-                //height: 1,
-                bgcolor: 'gold',
-                color: 'black',
-                border: 1,
-                borderColor: 'orange',
-                borderRadius: '50%',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'space-evenly'
-              }}>
-                <Typography sx={{
-                  //textTransform: 'uppercase',     // TODO: testing tailwind
-                  //fontWeight: 'bold'
-                }} >Gold</Typography>
-                <Typography sx={{
-                  //mt: 'auto'
-                }} >Reward Status</Typography>
-              </Avatar>
+    <div className='Dashboard'>
+      <Box className='w-full'>
+        <Box className='w-2/3 m-8 mx-auto flex flex-col flex-nowrap justify-evenly'>
+          <Box className='h-auto p-12 flex flex-col flex-nowrap justify-center items-center bg-yellow-200 rounded-3xl mb-8'>
+            <AspectRatio ratio='1/1' className='w-11/12 mb-8'>
+              <Box className='bg-amber-400 text-zinc-900 border-2 border-yellow-600 rounded-full flex flex-col justify-evenly'>
+                <Typography>Gold</Typography>
+                <Typography>Reward Status</Typography>
+              </Box>
             </AspectRatio>
-            <Box className='status_progress'>
+            <Box className='mt-8'>
               <Typography>3 Events Attended</Typography>
               <Typography>Next Status In: 2 Events</Typography>
               <LinearProgress variant='determinate' color='primary' value={60}></LinearProgress>
             </Box>
           </Box>
-          <Box className='rewards' sx={{
-            height: 600,
-            border: 1,
-            borderRadius: 10,
-            borderColor: 'blue',
+          <Box className='h-96 border-2 rounded-3xl border-blue-700' sx={{
             bgcolor: 'lightblue',
             display: 'flex',
             flexDirection: 'column',
