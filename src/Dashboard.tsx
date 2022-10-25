@@ -13,9 +13,8 @@ import '@fontsource/roboto/400.css'; // "           "
 import '@fontsource/roboto/500.css'; // "           "
 import '@fontsource/roboto/700.css'; // "           "
 
-// TODO: for some reason margins only work half the time
-// TODO: fix reward box height, figure out how to make it big but not static
-function Dashboard() {
+const Dashboard = () => {
+
   return (
     <div className='Dashboard'>
       <Box className='w-full'>
