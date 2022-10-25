@@ -1,11 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.tsx"],
+  content: [
+    "./index.html",
+    "./src/**/*",
+  ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'poppins': ['Poppins', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
-  corePlugins: {
-    preflight: false,
-  },
+  important: '#root',
 }
