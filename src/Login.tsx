@@ -27,9 +27,7 @@ function Login() {
           src='/src/assets/yellow-jacket-logo.png'
           alt='Yellow Jacket Logo'
         />
-      <Typography variant='h5'>
-        Dashboard Login
-      </Typography>
+      <Typography variant='h5'>Dashboard Login</Typography>
       </Box>
       <Box className="flex flex-col items-end">
         <TextField variant='outlined' label='Student ID'/>
