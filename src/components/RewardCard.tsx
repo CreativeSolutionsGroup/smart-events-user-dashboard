@@ -1,7 +1,7 @@
 import { Button, Card, Chip, Box, Typography } from "@mui/material"
 import { useState } from "react";
 
-const RewardCard = ({ label, sub_label, is_redeemable, on_redeem, is_claimed }: React.PropsWithChildren<{ label: String, sub_label: String, is_redeemable: boolean, on_redeem: Function, is_claimed?: Boolean }>) => {
+const RewardCard = ({ label, sub_label, is_redeemable, on_redeem, is_claimed }: React.PropsWithChildren<{ label: String, sub_label?: String, is_redeemable: boolean, on_redeem: Function, is_claimed?: Boolean }>) => {
 
     if (is_redeemable) {
         return (

@@ -11,6 +11,7 @@ const App = () => {
   const [redeem, set_redeem] = useState<Boolean>(false);
 
   const handleClick = () => {
+      alert("You have redeemed your reward!");
       set_redeem(true);
   };
 
@@ -23,7 +24,7 @@ const App = () => {
       <ProgressBar percent={25}>Hello world!</ProgressBar>
       <Typography align="center" variant="h4">Rewards</Typography>
       <RewardCard label="15% OFF Rinnova" sub_label="Gold Status Reward" is_redeemable={true} on_redeem={handleClick} />
-      <RewardCard label="Free 16oz coffee" sub_label="" is_redeemable={false} on_redeem={handleClick} is_claimed={redeem} />
+      <RewardCard label="Free 16oz coffee" is_redeemable={false} on_redeem={handleClick} is_claimed={redeem} />
     </div>
   )
 }
