@@ -1,21 +1,15 @@
 import * as React from 'react';
 import {
   Box,
-  Avatar, 
   TextField, 
   Button,
   Card,
-  CardMedia, 
   Typography,
 } from '@mui/material';
 import '@fontsource/roboto/300.css'; // Used by MUI?
 import '@fontsource/roboto/400.css'; // "           "
 import '@fontsource/roboto/500.css'; // "           "
 import '@fontsource/roboto/700.css'; // "           "
-import { 
-  flexbox,
-  spacing,
-} from '@mui/system';
 
 function Login() {
   return (

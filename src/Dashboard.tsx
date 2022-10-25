@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import {
-  Avatar,
   Box,
   Button,
   Card,
@@ -8,6 +7,7 @@ import {
   Typography
 } from '@mui/material'
 import AspectRatio from '@mui/joy/AspectRatio';
+import RewardsGraphic from './RewardsGraphic'
 import '@fontsource/roboto/300.css'; // Used by MUI?
 import '@fontsource/roboto/400.css'; // "           "
 import '@fontsource/roboto/500.css'; // "           "
@@ -20,18 +20,11 @@ function Dashboard() {
     <div className='Dashboard'>
       <Box className='w-full'>
         <Box className='w-2/3 m-8 mx-auto flex flex-col flex-nowrap justify-evenly'>
-          <Box className='h-auto p-12 flex flex-col flex-nowrap justify-center items-center bg-yellow-200 rounded-3xl mb-8'>
-            <AspectRatio ratio='1/1' className='w-11/12 mb-8'>
-              <Box className='bg-amber-400 text-zinc-900 border-2 border-yellow-600 rounded-full flex flex-col justify-center'>
-                <Typography>Gold</Typography>
-                <Typography>Reward Status</Typography>
-              </Box>
-            </AspectRatio>
-            <Box className='mt-8'>
-              <Typography>3 Events Attended</Typography>
-              <Typography>Next Status In: 2 Events</Typography>
-              <LinearProgress variant='determinate' color='primary' value={60}></LinearProgress>
-            </Box>
+          <RewardsGraphic></RewardsGraphic>
+          <Box className='w-3/4 h-fit flex flex-col justify-start items-center m-auto p-4'>
+            <Typography>3 Events Attended</Typography>
+            <Typography>Next Status In: 2 Events</Typography>
+            <LinearProgress className='w-36'variant='determinate' color='primary' value={60}></LinearProgress>
           </Box>
           <Box className='h-96 border-2 rounded-3xl border-blue-700 bg-blue-200 flex flex-col justify-around items-center'>
             <Typography className='font-black'>REWARDS</Typography>

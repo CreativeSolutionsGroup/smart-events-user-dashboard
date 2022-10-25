@@ -5,7 +5,11 @@ module.exports = {
     "./src/**/*",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'poppins': ['Poppins', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
   important: '#root',
