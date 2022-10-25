@@ -18,7 +18,7 @@ const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
 
 export const ProgressBar = ({ percent, children }: PropsWithChildren<{ percent: number }>) => {
     return (
-        <Box sx={{ flexGrow: 1 }}>
+        <Box sx={{minWidth: "25rem", flexGrow: 1 }}>
             {children}
             <BorderLinearProgress variant="determinate" value={percent} />
         </Box>

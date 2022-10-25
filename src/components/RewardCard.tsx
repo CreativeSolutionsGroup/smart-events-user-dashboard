@@ -5,7 +5,7 @@ const RewardCard = ({ label, sub_label, is_redeemable, on_redeem, is_claimed }: 
 
     if (is_redeemable) {
         return (
-            <Card sx={{display: "flex", flexDirection: "row", justifyContent: "space-between", width: "25rem", alignItems: "center", p: 1, m: 1}}>
+            <Card sx={{minWidth: "25rem", display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", p: 1, m: 1}}>
                 <Typography variant="subtitle1" fontWeight="bold">{label}</Typography>
                 <Typography variant="subtitle1">{sub_label}</Typography>
             </Card>
@@ -14,7 +14,7 @@ const RewardCard = ({ label, sub_label, is_redeemable, on_redeem, is_claimed }: 
     }
     else {
         return (
-            <Card sx={{display: "flex", flexDirection: "row", justifyContent: "space-between", width: "25rem", alignItems: "center", p: 1, m: 1}}>
+            <Card sx={{minWidth: "25rem", display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", p: 1, m: 1}}>
                 <Typography variant="subtitle1" fontWeight="bold">{label}</Typography>
                 <Button variant="contained" onClick={() => on_redeem()}>{is_claimed ? "Redeemed":"Redeem"}</Button>
             </Card>
