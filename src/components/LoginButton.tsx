@@ -1,33 +1,36 @@
-import { GoogleLogin } from 'react-google-login';
+import { GoogleLogin } from '@react-oauth/google';
+import { useEffect, useState } from 'react';
 
-const LoginButton = (props: any) => {
+const LoginButton = () => { 
+  
+  const [is_logged_in, set_is_logged_in] = useState(false);
 
-  const clientId = '8990298927-tftcl4kcfe52ikmu3quthlo7v3qvognu.apps.googleusercontent.com';
+  useEffect(() => {
+    set_is_logged_in(sessionStorage.getItem("credential") != null);
+  }, [])
 
-  const onSuccess = (res: any) => {
-    console.log('Login suceeded: res:', res);
-    //alert("Suceeded to login.");
-  };
-
-  const onFailure = (res: any) => {
-    console.log('Login failed: res:', res);
-    //alert("Failed to login.");
-  };
-
-  return (
-     <GoogleLogin
-        clientId={clientId}
-        buttonText="Login"
-        onSuccess={onSuccess}
-        onFailure={onFailure}
-        cookiePolicy={'single_host_origin'}
-        style={{ marginTop: '100px' }}
-        hostedDomain="cedarville.edu"
-        isSignedIn={true}
-        prompt="consent"
-        fetchBasicProfile={false}
+  if (!is_logged_in) {
+    return (
+      <GoogleLogin
+        onSuccess={credentialResponse => {
+          console.log(credentialResponse);
+          sessionStorage.setItem("credential", credentialResponse.credential!);
+          set_is_logged_in(true)
+        }}
+        onError={() => {
+          alert("Login Failed");
+        }}
+        hosted_domain="cedarville.edu"
       />
-  );
+    );
+  }
+  else {
+    return (
+      <div>
+        Already logged in.
+      </div>
+    );
+  }
 }
 
 export default LoginButton;

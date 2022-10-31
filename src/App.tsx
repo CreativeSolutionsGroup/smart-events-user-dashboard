@@ -6,6 +6,8 @@ import CheckInTable from './components/CheckInTable'
 import {ProgressBar} from './components/ProgressBar'
 import RewardCard from './components/RewardCard'
 import LoginButton from './components/LoginButton'
+import LogoutButton from './components/LogoutButton'
+//import RegisterUser from './components/RegisterUser'
 
 const App = () => {
   const [checkins, set_checkins] = useState([])
@@ -18,8 +20,8 @@ const App = () => {
   return (
     <div>
       <Login set_checkins={set_checkins} />
-      <LoginButton />
-
+      <LoginButton />  
+      <LogoutButton />
       <Typography sx={{mt: 5}} align="center">Check In</Typography>
       <CheckInTable checkins={checkins} />
       <ProgressBar percent={25}>Hello world!</ProgressBar>
