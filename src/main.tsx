@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App'
 import './App.css'
 import './index.css'
@@ -14,7 +15,14 @@ const clientId = '8990298927-tftcl4kcfe52ikmu3quthlo7v3qvognu.apps.googleusercon
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <GoogleOAuthProvider clientId={clientId}>
-      <App />
+      <RouterProvider 
+        router={createBrowserRouter([
+          {
+            path: "/",
+            element: <App />,
+          },
+        ])}
+      />
     </GoogleOAuthProvider>
   </React.StrictMode>
 )
