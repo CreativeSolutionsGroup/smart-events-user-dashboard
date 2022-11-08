@@ -7,6 +7,7 @@ import {ProgressBar} from './components/ProgressBar'
 import RewardCard from './components/RewardCard'
 import LoginButton from './components/LoginButton'
 import LogoutButton from './components/LogoutButton'
+import { BottomBar } from './components/BottomBar'
 //import RegisterUser from './components/RegisterUser'
 
 const App = () => {
@@ -28,6 +29,7 @@ const App = () => {
       <Typography align="center" variant="h4">Rewards</Typography>
       <RewardCard label="15% OFF Rinnova" sub_label="Gold Status Reward" is_redeemable={true} on_redeem={handleClick} />
       <RewardCard label="Free 16oz coffee" sub_label="" is_redeemable={false} on_redeem={handleClick} is_claimed={redeem} />
+      <BottomBar></BottomBar>
     </div>
   )
 }
