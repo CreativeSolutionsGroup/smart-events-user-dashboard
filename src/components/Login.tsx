@@ -14,15 +14,10 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import { useState } from 'react';
 import { get_all_checkins_by_id } from '../services/CheckIn';
+import LoginButton from './LoginButton';
+import LogoutButton from './LogoutButton';
 
-const Login = ({ set_checkins }: React.PropsWithChildren<{ set_checkins: Function }>) => {
-  const [stu_id, set_stu_id] = useState("");
-
-  const match_events_to_student = async () => {
-    const matchEvents = await get_all_checkins_by_id(stu_id);
-    set_checkins(matchEvents);
-  }
-
+const Login = () => {
   return (
     <Card
       sx={{
@@ -35,22 +30,8 @@ const Login = ({ set_checkins }: React.PropsWithChildren<{ set_checkins: Functio
         alignItems: 'center',
       }}>
       <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        <CardMedia
-          component='img'
-          image='/src/assets/yellow-jacket-logo.png'
-          alt='Yellow Jacket Logo'
-          sx={{
-            width: 100,
-            height: 100,
-          }}
-        />
-        <Typography variant='h5' sx={{ m: 1 }}>
-          Dashboard Login
-        </Typography>
-      </Box>
-      <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }}>
-        <TextField variant='outlined' label='Student ID' onInput={(evt: any) => set_stu_id(evt.target.value)} />
-        <Button sx={{ m: 1 }} onClick={() => match_events_to_student()}>Login</Button>
+        <LoginButton />
+        <LogoutButton />
       </Box>
     </Card>
   )

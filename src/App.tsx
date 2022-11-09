@@ -19,11 +19,8 @@ const App = () => {
 
   return (
     <div>
-      <Login set_checkins={set_checkins} />
-      <LoginButton />  
-      <LogoutButton />
+      <Login />
       <RegisterUser />
-      <Typography sx={{mt: 5}} align="center">Check In</Typography>
       <CheckInTable checkins={checkins} />
       <ProgressBar percent={25}>Hello world!</ProgressBar>
       <Typography align="center" variant="h4">Rewards</Typography>

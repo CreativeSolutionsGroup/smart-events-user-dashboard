@@ -20,8 +20,8 @@ const CheckInTable = ({ checkins }: React.PropsWithChildren<{ checkins: Array<Ch
     <Table>
       <TableHead>
         <TableRow >
-          <TableCell align="center">EVENT</TableCell>
-          <TableCell align="center">TIME</TableCell>
+          <TableCell align="center">Event</TableCell>
+          <TableCell align="center">Time</TableCell>
         </TableRow>
       </TableHead>
       <TableBody>
