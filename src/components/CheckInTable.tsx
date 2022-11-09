@@ -9,7 +9,7 @@ const CheckInTable = ({ checkins }: React.PropsWithChildren<{ checkins: Array<Ch
   const [all_events, set_all_events] = useState<Array<Event>>();
 
   const get_all_events = async () => {
-    let all_events_retrieved: Array<Event> = (await axios.get("http://localhost:3001/api/event")).data;
+    let all_events_retrieved: Array<Event> = (await axios.get("/event")).data;
     set_all_events(all_events_retrieved);
   }
 

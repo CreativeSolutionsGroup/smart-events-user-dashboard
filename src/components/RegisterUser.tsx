@@ -52,7 +52,7 @@ const RegisterUser = () => {
     }
 
     const send_register = async () => {
-        await axios.post(`http://localhost:3001/api/user/${stu_id}`);
+        await axios.post(`/user/${stu_id}`);
     }
 
     useEffect(() => {get_all_register_components()}, []);
