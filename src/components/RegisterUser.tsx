@@ -56,8 +56,8 @@ const RegisterUser = () => {
   return (
     <Card
       sx={{
-        p: 5,
-        height: 350,
+        py: 2,
+        px: 3,
         display: 'flex',
         flexDirection: 'column',
         flexwrap: 'nowrap',
@@ -79,7 +79,7 @@ const RegisterUser = () => {
             <TextField label='Confirm 5-digit ID' variant='outlined' onInput={(evt: any) => set_confirm_stu_id(evt.target.value)} inputProps={{ maxLength: 5 }} error={!id_match} helperText={confirm_id_helper} required fullWidth></TextField>
           </Grid>
           <Grid xs={12} sx={{ m: 1 }}>
-            <Button variant='contained' disabled={!enable} onClick={send_register}>CONFIRM</Button>
+            <Button variant='contained' disabled={!enable} onClick={send_register}>REGISTER</Button>
           </Grid>
         </Grid>
       </Box>

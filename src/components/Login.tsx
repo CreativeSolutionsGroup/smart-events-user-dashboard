@@ -21,12 +21,11 @@ const Login = () => {
   return (
     <Card
       sx={{
-        p: 5,
-        height: 350,
+        py: 3,
         display: 'flex',
         flexDirection: 'column',
         flexwrap: 'nowrap',
-        justifyContent: 'space-between',
+        justifyContent: 'center',
         alignItems: 'center',
       }}>
       <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
