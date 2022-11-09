@@ -9,7 +9,9 @@ export const Layout = ({ children }: PropsWithChildren) => {
   const do_login_check = async () => {
     try {
       const log = await check_login();
-      navigate('/dashboard')
+      if (log.status === 200) {
+        navigate('/dashboard')
+      }
     } catch (e) {
       navigate("/login");
     }
