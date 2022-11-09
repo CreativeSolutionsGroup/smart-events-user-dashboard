@@ -12,6 +12,6 @@ export const get_all_checkins_by_id = async (stu_id: string): Promise<Array<Chec
 }
 
 export const get_all_events = async (): Promise<Array<Event>> => {
-   const req = await axios.get("/event");
+   const req = await axios.get("/events");
    return req.data as Array<Event>;
 }
