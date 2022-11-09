@@ -12,13 +12,7 @@ import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
-import {
-  flexbox,
-  spacing,
-} from '@mui/system';
-import axios from 'axios';
 import { useState } from 'react';
-import { CheckIn } from '../models/checkin';
 import { get_all_checkins_by_id } from '../services/CheckIn';
 
 const Login = ({ set_checkins }: React.PropsWithChildren<{ set_checkins: Function }>) => {
