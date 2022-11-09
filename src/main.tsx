@@ -9,6 +9,7 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import { GoogleOAuthProvider } from '@react-oauth/google'
 import axios from 'axios'
+import Dashboard from './views/Dashboard';
 
 const clientId = '8990298927-tftcl4kcfe52ikmu3quthlo7v3qvognu.apps.googleusercontent.com';
 
@@ -18,12 +19,20 @@ axios.defaults.baseURL = import.meta.env.VITE_BACKEND ?? "http://localhost:3001/
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <GoogleOAuthProvider clientId={clientId}>
-      <RouterProvider 
+      <RouterProvider
         router={createBrowserRouter([
           {
             path: "/",
             element: <App />,
           },
+          {
+            path: "/login",
+            element: <App />,
+          },
+          {
+            path: "/dashboard",
+            element: <Dashboard />
+          }
         ])}
       />
     </GoogleOAuthProvider>
