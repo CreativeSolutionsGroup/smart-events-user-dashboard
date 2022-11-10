@@ -10,6 +10,12 @@ import { Layout } from './components/Layout'
 
 const App = () => {
   const [checkins, set_checkins] = useState([])
+  const [redeem, set_redeem] = useState<Boolean>(false);
+
+  const handleClick = () => {
+    alert("You have redeemed your reward!");
+    set_redeem(true);
+  };
 
   return (
     <Layout>
@@ -21,8 +27,11 @@ const App = () => {
         <CheckInTable checkins={checkins} />
         <ProgressBar percent={25}>Hello world!</ProgressBar>
         <Typography align="center" variant="h4">Rewards</Typography>
-        <RewardCard label="15% OFF Rinnova" sub_label="Gold Status Reward" is_redeemable={true} on_redeem={() => { }} />
-        <RewardCard label="Free 16oz coffee" sub_label="" is_redeemable={false} on_redeem={() => { }} is_claimed={false} />
+
+        <RewardCard label="15% OFF Rinnova" is_redeemable={true} on_redeem={handleClick} />
+        <RewardCard label="Free Book" is_redeemable={false} on_redeem={handleClick} />
+        <RewardCard label="Free 16oz Coffee" is_redeemable={false} on_redeem={handleClick} />
+        <RewardCard label="Free 16oz Coffee" is_redeemable={false} on_redeem={handleClick} />
       </Box>
     </Layout>
   )
