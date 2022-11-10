@@ -9,7 +9,6 @@ const Dashboard = () => {
 
   return (
     <Layout>
-      <Login />
     </Layout>
   )
 }

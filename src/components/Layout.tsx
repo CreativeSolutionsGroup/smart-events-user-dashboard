@@ -8,6 +8,7 @@ export const Layout = ({ children }: PropsWithChildren) => {
 
   const do_login_check = async () => {
     if (sessionStorage.getItem("credential") == null) {
+      console.log("hit")
       navigate("/login");
     }
     try {
