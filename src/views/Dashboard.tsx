@@ -4,7 +4,6 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import { Box, Typography } from '@mui/material';
 import { Layout } from '../components/Layout';
-import Login from '../components/Login';
 import RewardCard from '../components/RewardCard';
 
 const Dashboard = () => {
