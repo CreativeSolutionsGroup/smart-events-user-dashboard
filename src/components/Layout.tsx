@@ -7,6 +7,9 @@ export const Layout = ({ children }: PropsWithChildren) => {
   const { pathname } = useLocation();
 
   const do_login_check = async () => {
+    if (sessionStorage.getItem("credential") == null) {
+      navigate("/login");
+    }
     try {
       const log = await check_login();
       if (log.status === 200) {

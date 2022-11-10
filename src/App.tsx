@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { Typography } from '@mui/material'
-import Login from './components/Login'
 import CheckInTable from './components/CheckInTable'
 import { ProgressBar } from './components/ProgressBar'
 import RewardCard from './components/RewardCard'
@@ -20,9 +19,6 @@ const App = () => {
   return (
     <Layout>
       <Box minWidth={350} width="50%" display="flex" flexDirection="column" mx="auto">
-        <Box mb={3}>
-          <Login />
-        </Box>
         <RegisterUser />
         <CheckInTable checkins={checkins} />
         <ProgressBar percent={25}>Hello world!</ProgressBar>

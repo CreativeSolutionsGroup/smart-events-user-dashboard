@@ -10,6 +10,7 @@ import '@fontsource/roboto/700.css';
 import { GoogleOAuthProvider } from '@react-oauth/google'
 import axios from 'axios'
 import Dashboard from './views/Dashboard';
+import { LoginPage } from './views/LoginPage';
 
 const clientId = '8990298927-tftcl4kcfe52ikmu3quthlo7v3qvognu.apps.googleusercontent.com';
 
@@ -27,7 +28,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
           },
           {
             path: "/login",
-            element: <App />,
+            element: <LoginPage />,
           },
           {
             path: "/dashboard",
