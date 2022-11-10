@@ -4,12 +4,8 @@ import Login from './components/Login'
 import CheckInTable from './components/CheckInTable'
 import { ProgressBar } from './components/ProgressBar'
 import RewardCard from './components/RewardCard'
-import LoginButton from './components/LoginButton'
-import LogoutButton from './components/LogoutButton'
-import { BottomBar } from './components/BottomBar'
-//import RegisterUser from './components/RegisterUser'
 import RegisterUser from './components/RegisterUser'
-import { Box } from '@mui/system'
+import { Box } from '@mui/material'
 import { Layout } from './components/Layout'
 
 const App = () => {
