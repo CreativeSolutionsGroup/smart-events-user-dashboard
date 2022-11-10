@@ -1,7 +1,6 @@
-import * as React from 'react';
 import { styled } from '@mui/material/styles';
-import { Box } from '@mui/material';
-import { PropsWithChildren, useEffect, useState } from "react"
+import Box from '@mui/material/Box';
+import { PropsWithChildren } from "react"
 import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
 
 const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({

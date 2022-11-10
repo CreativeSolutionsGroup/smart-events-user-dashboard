@@ -1,6 +1,4 @@
-import { Tab } from "@mui/icons-material"
 import { Table, TableBody, TableCell, TableHead, TableRow } from "@mui/material"
-import axios from "axios";
 import { useEffect, useState } from "react";
 import { CheckIn, Event } from "../models/checkin"
 import { get_all_events } from "../services/CheckIn";
