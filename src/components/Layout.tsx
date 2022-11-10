@@ -1,5 +1,5 @@
 import { PropsWithChildren, useEffect } from "react";
-import { useLocation, useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import { check_login } from "../services/User";
 import { BottomBar } from "./BottomBar";
 
