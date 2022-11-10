@@ -29,7 +29,7 @@ const App = () => {
       <RewardCard label="Free Book" is_redeemable={false} on_redeem={handleClick} />
       <RewardCard label="Free 16oz Coffee" is_redeemable={false} on_redeem={handleClick} />
       <RewardCard label="Free 16oz Coffee" is_redeemable={false} on_redeem={handleClick} />
-    </div>
+    </Box>
   )
 }
 
