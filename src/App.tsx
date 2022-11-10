@@ -1,10 +1,11 @@
 import { useState } from 'react'
-import './App.css'
 import { Typography } from '@mui/material'
 import Login from './components/Login'
 import CheckInTable from './components/CheckInTable'
-import {ProgressBar} from './components/ProgressBar'
+import { ProgressBar } from './components/ProgressBar'
 import RewardCard from './components/RewardCard'
+import RegisterUser from './components/RegisterUser'
+import { Box } from '@mui/system'
 
 const App = () => {
   const [checkins, set_checkins] = useState([])
@@ -16,10 +17,11 @@ const App = () => {
   };
 
   return (
-    <div>
-      <Login set_checkins={set_checkins} />
-
-      <Typography sx={{mt: 5}} align="center">Check In</Typography>
+    <Box minWidth={350} width="50%" display="flex" flexDirection="column" mx="auto">
+      <Box mb={3}>
+        <Login />
+      </Box>
+      <RegisterUser />
       <CheckInTable checkins={checkins} />
       <ProgressBar percent={25}>Hello world!</ProgressBar>
       <Typography align="center" variant="h4">Rewards</Typography>
