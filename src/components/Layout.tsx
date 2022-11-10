@@ -4,11 +4,9 @@ import { check_login } from "../services/User";
 
 export const Layout = ({ children }: PropsWithChildren) => {
   const navigate = useNavigate();
-  const { pathname } = useLocation();
 
   const do_login_check = async () => {
     if (sessionStorage.getItem("credential") == null) {
-      console.log("hit")
       navigate("/login");
     }
     try {
