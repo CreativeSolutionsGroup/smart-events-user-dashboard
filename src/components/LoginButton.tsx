@@ -7,6 +7,7 @@ import { check_login } from "../services/User";
 const LoginButton = () => { 
   
   const [is_logged_in, set_is_logged_in] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     set_is_logged_in(sessionStorage.getItem("credential") != null);
@@ -18,7 +19,6 @@ const LoginButton = () => {
         onSuccess={async credentialResponse => {
           sessionStorage.setItem("credential", credentialResponse.credential!);
           axios.defaults.headers.common = { "Authorization": `Bearer ${sessionStorage.getItem("credential")}` };
-          const navigate = useNavigate();
           try {
             const log = await check_login();
             if (log.status === 200) {
