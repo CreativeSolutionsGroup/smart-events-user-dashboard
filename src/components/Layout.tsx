@@ -26,7 +26,7 @@ export const Layout = ({ children }: PropsWithChildren) => {
 
   return (
     <div>
-      <AppBar sx={{width: 1, display: "flex"}}>
+      <AppBar sx={{width: 1, display: "flex", position: "sticky"}}>
         <Button sx={{width: 1/6, color: "white", ml: "auto", mr: 1, my: 1, border: 1}} variant="outlined">Logout</Button>
       </AppBar>
       { children }
