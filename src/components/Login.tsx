@@ -1,27 +1,25 @@
 import {
-  Box,
   Card,
+  CardContent,
+  Typography,
 } from '@mui/material';
-import '@fontsource/roboto/300.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
 import LoginButton from './LoginButton';
 
 const Login = () => {
   return (
     <Card
       sx={{
-        py: 3,
+        p: 3,
         display: 'flex',
         flexDirection: 'column',
         flexwrap: 'nowrap',
         justifyContent: 'center',
         alignItems: 'center',
       }}>
-      <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <CardContent>
+        <Typography mb={2.5} variant="h5">Login with Google</Typography>
         <LoginButton />
-      </Box>
+      </CardContent>
     </Card>
   )
 }
