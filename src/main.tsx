@@ -15,6 +15,7 @@ import { RegisterPage } from './views/RegisterPage';
 import theme from "./theme";
 import { ThemeProvider } from '@emotion/react';
 import { Redirector } from './components/Redirector';
+import { StatsPage } from './views/StatsPage';
 
 const clientId = import.meta.env.VITE_CLIENT_ID ?? '8990298927-tftcl4kcfe52ikmu3quthlo7v3qvognu.apps.googleusercontent.com';
 
@@ -44,7 +45,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/stats",
-    element: <></>
+    element: <StatsPage />
   }
 ])
 

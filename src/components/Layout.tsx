@@ -15,11 +15,9 @@ export const Layout = ({ children }: PropsWithChildren) => {
     const login_check_passed = await check_login();
     set_is_logged_in(login_check_passed)
 
-    if (login_check_passed) {
-      navigate("/dashboard")
-    } else {
+    if (!login_check_passed) {
       navigate("/login")
-    }
+    } 
   };
 
   useEffect(() => { do_login_check() }, []);
