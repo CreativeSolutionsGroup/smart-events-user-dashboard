@@ -19,15 +19,14 @@ const LoginButton = () => {
         onSuccess={async credentialResponse => {
           sessionStorage.setItem("credential", credentialResponse.credential!);
           axios.defaults.headers.common = { "Authorization": `Bearer ${sessionStorage.getItem("credential")}` };
-          try {
-            const log = await check_login();
-            if (log.status === 200) {
-              navigate('/dashboard')
-            }
-          } catch (e) {
-            navigate("/register");
+          const check_login_passed = await check_login();
+
+          if (check_login_passed) {
+            navigate("/dashboard")
+          } else {
+            navigate("/register")
           }
-          set_is_logged_in(true)
+
         }}
         onError={() => {
           alert("Login Failed");
