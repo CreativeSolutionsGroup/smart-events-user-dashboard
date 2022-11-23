@@ -31,19 +31,19 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
               element: <Layout />
             },
             {
-              path: "/login",
+              path: "/login*",
               element: <LoginPage />,
             },
             {
-              path: "/register",
+              path: "/register*",
               element: <RegisterPage />,
             },
             {
-              path: "/dashboard",
+              path: "/dashboard*",
               element: <Dashboard />
             },
             {
-              path: "/stats",
+              path: "/stats*",
               element: <></>
             }
           ])}
