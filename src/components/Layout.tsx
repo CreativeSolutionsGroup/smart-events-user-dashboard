@@ -4,6 +4,7 @@ import { check_login } from "../services/User";
 import { BottomBar } from "./BottomBar";
 import AppBar from '@mui/material/AppBar'
 import LogoutButton from './LogoutButton'
+import { TopBar } from "./TopBar";
 
 export const Layout = ({ children }: PropsWithChildren) => {
   const navigate = useNavigate();
@@ -26,10 +27,10 @@ export const Layout = ({ children }: PropsWithChildren) => {
 
   return (
     <div>
-      <AppBar sx={{width: 1, display: "flex", position: "sticky", bgcolor: "white"}}>
-        <LogoutButton></LogoutButton>
-      </AppBar>
+      <TopBar />
+
       { children }
+
       <BottomBar />
     </div>
   );
