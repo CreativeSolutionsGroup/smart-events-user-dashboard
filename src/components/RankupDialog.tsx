@@ -1,5 +1,6 @@
 import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Typography } from "@mui/material";
 import { useState } from "react";
+import { rankup } from "../services/User";
 
 const RankupDialog = () => {
   const [open, set_open] = useState(false);
@@ -8,7 +9,8 @@ const RankupDialog = () => {
     set_open(true);
   };
 
-  const handleClose = () => {
+  const handleClose = async () => {
+    await rankup();
     set_open(false);
   };
 
