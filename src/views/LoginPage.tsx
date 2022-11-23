@@ -9,7 +9,6 @@ export const LoginPage = () => {
       <Box display="flex" flex="1" justifyContent="center" alignItems="center" height={1}>
         <Login />
       </Box>
-      <RankupDialog />
     </Layout>
   )
 }
