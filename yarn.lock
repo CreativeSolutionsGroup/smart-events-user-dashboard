@@ -255,9 +255,9 @@
     to-fast-properties "^2.0.0"
 
 "@creativesolutionsgroup/bottom-paper@^0.1.2-8":
-  version "0.1.2-8"
-  resolved "https://registry.yarnpkg.com/@creativesolutionsgroup/bottom-paper/-/bottom-paper-0.1.2-8.tgz#8896c12e6f6a9043d515359411ee3a8460c3feb9"
-  integrity sha512-biMextAJ1Shd5nN2lJrgREPNvGBs8Hve8uiy1PFgVj202zr15hyVHKq7i+cj4Te98kKYguDTvWMQlFwU/BVjtw==
+  version "0.1.2-9"
+  resolved "https://registry.yarnpkg.com/@creativesolutionsgroup/bottom-paper/-/bottom-paper-0.1.2-9.tgz#3f768e83dabccb666c6627c96887328f07969e1c"
+  integrity sha512-Ng96i3sVq8bTV9hI0DRX1u+GBy/c2OnjawZEmo3HrT4vWXZzD/QVcxP9awo7FEy5PssgoazKbdaN+fAXoDctVw==
   dependencies:
     "@react-spring/web" "^9.5.5"
     react "^18.2.0"
