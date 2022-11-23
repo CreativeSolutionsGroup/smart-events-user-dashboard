@@ -14,7 +14,7 @@ const Dashboard = () => {
   const [rewards, set_rewards] = useState([
     {
       date_earned: new Date(),
-      remaining_uses: 1,
+      remaining_uses: -1,
       user_id: "",
       reward: {
         name: "15% OFF Rinnova",

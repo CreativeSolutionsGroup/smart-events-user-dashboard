@@ -14,7 +14,7 @@ const ActionArea = ({label}: PropsWithChildren<{label: string}>) => (
 const RewardCard = ({ reward, is_redeemable, on_redeem }: React.PropsWithChildren<{ reward: IReward, is_redeemable: boolean, on_redeem: Function }>) => {
   if (is_redeemable) {
     return (
-      <Card sx={{ alignItems: "center", cursor: "pointer", m: 1, background: grey[300], outlineColor: grey[400] }} onClick={() => on_redeem()}>
+      <Card sx={{ alignItems: "center", cursor: "pointer", m: 1, outlineColor: grey[400] }} onClick={() => on_redeem()}>
         <ActionArea label={reward.name} />
       </Card>
     )
@@ -22,7 +22,7 @@ const RewardCard = ({ reward, is_redeemable, on_redeem }: React.PropsWithChildre
   }
   else {
     return (
-      <Card sx={{ alignItems: "center", cursor: "pointer", m: 1, outlineColor: grey[400] }} onClick={() => on_redeem()}>
+      <Card sx={{ alignItems: "center", cursor: "pointer", m: 1, background: grey[300], outlineColor: grey[400] }} onClick={() => on_redeem()}>
         <ActionArea label={reward.name} />
       </Card>
     )

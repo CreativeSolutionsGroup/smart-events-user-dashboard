@@ -23,7 +23,7 @@ function UserRewardDisplay({ user_rewards }: PropsWithChildren<{ user_rewards: A
       <RedeemPopup show={show_reward_popup} reward={current_reward} onClose={handle_close} />
 
       {user_rewards.map(user_reward => (
-        <RewardCard on_redeem={handle_click(user_reward.reward)} is_redeemable={user_reward.remaining_uses !== -1} reward={user_reward.reward} />
+        <RewardCard on_redeem={handle_click(user_reward.reward)} is_redeemable={user_reward.remaining_uses === -1} reward={user_reward.reward} />
       ))}
     </div>
   )
