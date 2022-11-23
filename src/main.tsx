@@ -38,6 +38,10 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
           {
             path: "/dashboard",
             element: <Dashboard />
+          },
+          {
+            path: "/stats",
+            element: <></>
           }
         ])}
       />
