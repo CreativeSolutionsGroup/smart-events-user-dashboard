@@ -254,14 +254,14 @@
     "@babel/helper-validator-identifier" "^7.18.6"
     to-fast-properties "^2.0.0"
 
-"@creativesolutionsgroup/bottom-paper@^0.1.2-2":
-  version "0.1.2-2"
-  resolved "https://npm.pkg.github.com/download/@creativesolutionsgroup/bottom-paper/0.1.2-2/f0b75f580473e85d76ebcba17cbcc6d2cd449355#f0b75f580473e85d76ebcba17cbcc6d2cd449355"
-  integrity sha512-RE4w3y9zCM180s6tx3+NguDDDPC0Hodwr/7SAyXbnPUNPYEUsxt7yKUl0GqcYQ4+2pfIarfJg+vOwrOi2A1K/A==
+"@creativesolutionsgroup/bottom-paper@^0.1.2-5":
+  version "0.1.2-5"
+  resolved "https://npm.pkg.github.com/download/@creativesolutionsgroup/bottom-paper/0.1.2-5/9026babe58acb68066aa38a4d16cb40795eeb786#9026babe58acb68066aa38a4d16cb40795eeb786"
+  integrity sha512-xu98Yk4/kg2rdTzgN3ZUgHWWw+aqG7cZCXNv6mKWQY6YG4XobZ/u7OyahRFjzgwbtkaA4bgdI6t8b6t6TnvwqQ==
   dependencies:
+    "@react-spring/web" "^9.5.5"
     react "^18.2.0"
     react-dom "^18.2.0"
-    react-particles "^2.5.3"
     react-swipeable "^7.0.0"
 
 "@emotion/babel-plugin@^11.10.0":
@@ -563,6 +563,52 @@
   version "0.2.8"
   resolved "https://registry.yarnpkg.com/@react-oauth/google/-/google-0.2.8.tgz#68ebce792c6c5e4123c7485d1c60ae562a894924"
   integrity sha512-W3sRcU6kSZMGUOk10Vy5kPZPzvsi7+UpM2MxnT6fMVp+whDMKCVope5R01gwRydK9OI+0rozAARCD2NgrbkV7w==
+
+"@react-spring/animated@~9.5.5":
+  version "9.5.5"
+  resolved "https://registry.yarnpkg.com/@react-spring/animated/-/animated-9.5.5.tgz#d3bfd0f62ed13a337463a55d2c93bb23c15bbf3e"
+  integrity sha512-glzViz7syQ3CE6BQOwAyr75cgh0qsihm5lkaf24I0DfU63cMm/3+br299UEYkuaHNmfDfM414uktiPlZCNJbQA==
+  dependencies:
+    "@react-spring/shared" "~9.5.5"
+    "@react-spring/types" "~9.5.5"
+
+"@react-spring/core@~9.5.5":
+  version "9.5.5"
+  resolved "https://registry.yarnpkg.com/@react-spring/core/-/core-9.5.5.tgz#1d8a4c64630ee26b2295361e1eedfd716a85b4ae"
+  integrity sha512-shaJYb3iX18Au6gkk8ahaF0qx0LpS0Yd+ajb4asBaAQf6WPGuEdJsbsNSgei1/O13JyEATsJl20lkjeslJPMYA==
+  dependencies:
+    "@react-spring/animated" "~9.5.5"
+    "@react-spring/rafz" "~9.5.5"
+    "@react-spring/shared" "~9.5.5"
+    "@react-spring/types" "~9.5.5"
+
+"@react-spring/rafz@~9.5.5":
+  version "9.5.5"
+  resolved "https://registry.yarnpkg.com/@react-spring/rafz/-/rafz-9.5.5.tgz#62a49c5e294104b79db2a8afdf4f3a274c7f44ca"
+  integrity sha512-F/CLwB0d10jL6My5vgzRQxCNY2RNyDJZedRBK7FsngdCmzoq3V4OqqNc/9voJb9qRC2wd55oGXUeXv2eIaFmsw==
+
+"@react-spring/shared@~9.5.5":
+  version "9.5.5"
+  resolved "https://registry.yarnpkg.com/@react-spring/shared/-/shared-9.5.5.tgz#9be0b391d546e3e184a24ecbaf40acbaeab7fc73"
+  integrity sha512-YwW70Pa/YXPOwTutExHZmMQSHcNC90kJOnNR4G4mCDNV99hE98jWkIPDOsgqbYx3amIglcFPiYKMaQuGdr8dyQ==
+  dependencies:
+    "@react-spring/rafz" "~9.5.5"
+    "@react-spring/types" "~9.5.5"
+
+"@react-spring/types@~9.5.5":
+  version "9.5.5"
+  resolved "https://registry.yarnpkg.com/@react-spring/types/-/types-9.5.5.tgz#c8e94f1b9232ca7cb9d860ea67762ec401b1de14"
+  integrity sha512-7I/qY8H7Enwasxr4jU6WmtNK+RZ4Z/XvSlDvjXFVe7ii1x0MoSlkw6pD7xuac8qrHQRm9BTcbZNyeeKApYsvCg==
+
+"@react-spring/web@^9.5.5":
+  version "9.5.5"
+  resolved "https://registry.yarnpkg.com/@react-spring/web/-/web-9.5.5.tgz#d416abc591aaed930401f0c98a991a8c5b90c382"
+  integrity sha512-+moT8aDX/ho/XAhU+HRY9m0LVV9y9CK6NjSRaI+30Re150pB3iEip6QfnF4qnhSCQ5drpMF0XRXHgOTY/xbtFw==
+  dependencies:
+    "@react-spring/animated" "~9.5.5"
+    "@react-spring/core" "~9.5.5"
+    "@react-spring/shared" "~9.5.5"
+    "@react-spring/types" "~9.5.5"
 
 "@remix-run/router@1.0.0":
   version "1.0.0"
@@ -914,11 +960,6 @@ escape-string-regexp@^4.0.0:
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz#14ba83a5d373e3d311e5afca29cf5bfad965bf34"
   integrity sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==
 
-fast-deep-equal@^3.1.3:
-  version "3.1.3"
-  resolved "https://registry.yarnpkg.com/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz#3a7d56b559d6cbc3eb512325244e619a65c6c525"
-  integrity sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==
-
 find-root@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/find-root/-/find-root-1.1.0.tgz#abcfc8ba76f708c42a97b3d685b7e9450bfb9ce4"
@@ -1141,14 +1182,6 @@ react-is@^18.2.0:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-18.2.0.tgz#199431eeaaa2e09f86427efbb4f1473edb47609b"
   integrity sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==
 
-react-particles@^2.5.3:
-  version "2.5.3"
-  resolved "https://registry.yarnpkg.com/react-particles/-/react-particles-2.5.3.tgz#eb6d50e98054c74bc523aacb7cfa37d1c106c237"
-  integrity sha512-TREHHCvJiYYFuuJ43zY3HBafIt2CrD4JK9Nm4BZ+IoWgumEptUR7xZDeYGqjjsR4Dih4zHG087iMusHKO4lNxw==
-  dependencies:
-    fast-deep-equal "^3.1.3"
-    tsparticles-engine "^2.5.2"
-
 react-refresh@^0.14.0:
   version "0.14.0"
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.14.0.tgz#4e02825378a5f227079554d4284889354e5f553e"
@@ -1279,11 +1312,6 @@ to-fast-properties@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/to-fast-properties/-/to-fast-properties-2.0.0.tgz#dc5e698cbd079265bc73e0377681a4e4e83f616e"
   integrity sha512-/OaKK0xYrs3DmxRYqL/yDc+FxFUVYhDlXMhRmv3z915w2HF1tnN1omB354j8VUGO/hbRzyD6Y3sA7v7GS/ceog==
-
-tsparticles-engine@^2.5.2:
-  version "2.5.2"
-  resolved "https://registry.yarnpkg.com/tsparticles-engine/-/tsparticles-engine-2.5.2.tgz#1772e857c452af806602ab0f33c90338d109f8b8"
-  integrity sha512-P2m1E/EIlvEnH9l7OEIpeKXxSn1ThNhWSp6zeRYvH/DntJpI5Oqa/AMrjum15rUzBkMDgRo7XFO4LqRWs8iB/Q==
 
 typescript@^4.6.4:
   version "4.8.3"
