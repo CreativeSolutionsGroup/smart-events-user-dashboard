@@ -2,6 +2,9 @@ import { PropsWithChildren, useEffect } from "react";
 import { useNavigate } from "react-router-dom"
 import { check_login } from "../services/User";
 import { BottomBar } from "./BottomBar";
+import AppBar from '@mui/material/AppBar'
+import LogoutButton from './LogoutButton'
+import { TopBar } from "./TopBar";
 
 export const Layout = ({ children }: PropsWithChildren) => {
   const navigate = useNavigate();
@@ -24,7 +27,10 @@ export const Layout = ({ children }: PropsWithChildren) => {
 
   return (
     <div>
+      <TopBar />
+
       { children }
+
       <BottomBar />
     </div>
   );

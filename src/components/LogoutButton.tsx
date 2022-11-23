@@ -11,7 +11,7 @@ const LogoutButton = () => {
   };
 
   return (
-    <Button onClick={handleClick}> 
+    <Button onClick={handleClick} variant="outlined" sx={{m: 1, width: 1/6, ml: "auto"}}> 
         Logout
     </Button>
   );
