@@ -14,39 +14,46 @@ import { Layout } from './components/Layout';
 import { RegisterPage } from './views/RegisterPage';
 import theme from "./theme";
 import { ThemeProvider } from '@emotion/react';
+import { Redirector } from './components/Redirector';
 
 const clientId = import.meta.env.VITE_CLIENT_ID ?? '8990298927-tftcl4kcfe52ikmu3quthlo7v3qvognu.apps.googleusercontent.com';
 
 axios.defaults.headers.common = { "Authorization": `Bearer ${sessionStorage.getItem("credential")}` };
 axios.defaults.baseURL = import.meta.env.VITE_BACKEND ?? "http://localhost:3001/api";
 
+const router = createBrowserRouter([
+  {
+    path: "*",
+    element: <Redirector />
+  },
+  {
+    path: "/",
+    element: <LoginPage />
+  },
+  {
+    path: "/login",
+    element: <LoginPage />,
+  },
+  {
+    path: "/register",
+    element: <RegisterPage />,
+  },
+  {
+    path: "/dashboard",
+    element: <Dashboard />
+  },
+  {
+    path: "/stats",
+    element: <></>
+  }
+])
+
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <GoogleOAuthProvider clientId={clientId}>
         <RouterProvider
-          router={createBrowserRouter([
-            {
-              path: "/",
-              element: <Layout />
-            },
-            {
-              path: "/login*",
-              element: <LoginPage />,
-            },
-            {
-              path: "/register*",
-              element: <RegisterPage />,
-            },
-            {
-              path: "/dashboard*",
-              element: <Dashboard />
-            },
-            {
-              path: "/stats*",
-              element: <></>
-            }
-          ])}
+          router={router}
         />
       </GoogleOAuthProvider>
     </ThemeProvider>
