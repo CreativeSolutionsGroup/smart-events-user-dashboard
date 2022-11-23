@@ -256,8 +256,8 @@
 
 "@creativesolutionsgroup/bottom-paper@^0.1.2-7":
   version "0.1.2-7"
-  resolved "https://npm.pkg.github.com/download/@creativesolutionsgroup/bottom-paper/0.1.2-7/584e0d490d35413bedcab332a1c9b43c71581871#584e0d490d35413bedcab332a1c9b43c71581871"
-  integrity sha512-RrzPy8ZfcmVc0tONsu12AmdW0o8V9lHobwSFqh+v3RKii2ZRRN1VMMyHp7rvTY81n5bDAZqKY2Bzt764d2ymjQ==
+  resolved "https://registry.yarnpkg.com/@creativesolutionsgroup/bottom-paper/-/bottom-paper-0.1.2-7.tgz#6142c9b77c284d513ead1c7ce4177114689be45d"
+  integrity sha512-vktv/TkFIDsstWNW6vR5D0arRsB1iSnT+C9d1kGtX7/1jrLpyf/S4AN4dlr4i3/mEsEXljLh29/5tuwtZ/3IOg==
   dependencies:
     "@react-spring/web" "^9.5.5"
     react "^18.2.0"
