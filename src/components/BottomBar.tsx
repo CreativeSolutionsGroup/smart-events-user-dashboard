@@ -9,7 +9,7 @@ export const BottomBar = () => {
   const location = useLocation();
 
   return (
-      <BottomNavigation value={location.pathname} component={Paper} sx={{ position: "fixed", bottom: 0, minWidth: "100%" }} elevation={3} showLabels>
+      <BottomNavigation value={location.pathname} component={Paper} sx={{ position: "sticky", bottom: 0, minWidth: "100%" }} elevation={3} showLabels>
           <BottomNavigationAction label="Dashboard" value="/dashboard" icon={<HomeIcon />} href="/dashboard" LinkComponent={Link} />
           <BottomNavigationAction label="Stats" value="/stats" icon={<BarChartIcon />} href="/stats" LinkComponent={Link}/>
       </BottomNavigation>
