@@ -1,13 +1,11 @@
-
 html,
 body {
   margin: 0;
   padding: 0;
-  overscroll-behavior-y: none;
   width: 100%;
   height: 100%;
-  position: fixed;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  overscroll-behavior-y: "contain";
 }
 
 :root {
@@ -36,10 +34,7 @@ a:hover {
 }
 
 body {
-  margin: 0;
-  /*display: flex;
-  place-items: center;*/
-  height: 100vh;
+  min-height: 100vh;
 }
 @media (prefers-color-scheme: light) {
   :root {

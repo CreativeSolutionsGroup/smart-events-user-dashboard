@@ -1,11 +1,15 @@
 import { BottomPaper } from "@creativesolutionsgroup/bottom-paper"
 import { Button, Paper, Typography } from "@mui/material"
-import { PropsWithChildren } from "react"
+import { PropsWithChildren, useEffect } from "react"
 import { IReward } from "../models/User"
 
 interface PopupProps { reward: IReward, show?: boolean, onClose: Function };
 
 export const RedeemPopup = ({ reward, show, onClose }: PropsWithChildren<PopupProps>) => {
+  useEffect(() => {
+    document.body.style.overflowY = show ? "hidden" : "scroll";
+  }, [show])
+
   return (
     <BottomPaper show={show ?? false} onClose={onClose}>
       <Typography variant="h5">{reward.name ?? ""}</Typography>

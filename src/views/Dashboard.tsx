@@ -62,7 +62,7 @@ const Dashboard = () => {
 
   return (
     <Layout>
-      <Box minWidth={350} pt={20} width="50%" display="flex" flexDirection="column" mx="auto">
+      <Box minWidth={350} pt={8} width="50%" display="flex" flexDirection="column" mx="auto">
         <RewardsGraphic reward_status={reward_tier.name} color={reward_tier.color} />
         <Typography mt={5} align="center" variant="h4">Rewards</Typography>
         <UserRewardDisplay user_rewards={rewards} />
