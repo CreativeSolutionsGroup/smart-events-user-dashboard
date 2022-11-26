@@ -9,6 +9,7 @@ export const RedeemPopup = ({ reward, show, onClose }: PropsWithChildren<PopupPr
   useEffect(() => {
     document.body.style.position = show ? "fixed" : "";
     document.body.style.overflow = show ? "hidden" : "scroll";
+    document.body.style.overscrollBehaviorY = show ? "none" : "";
   }, [show])
 
   return (
