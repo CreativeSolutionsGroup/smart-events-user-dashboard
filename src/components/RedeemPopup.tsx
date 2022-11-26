@@ -7,8 +7,8 @@ interface PopupProps { reward: IReward, show?: boolean, onClose: Function };
 
 export const RedeemPopup = ({ reward, show, onClose }: PropsWithChildren<PopupProps>) => {
   useEffect(() => {
-    document.body.style.overflowY = show ? "hidden" : "scroll";
     document.body.style.position = show ? "fixed" : "";
+    document.body.style.overflow = show ? "hidden" : "scroll";
   }, [show])
 
   return (
