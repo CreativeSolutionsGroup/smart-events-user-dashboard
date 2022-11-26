@@ -1,6 +1,6 @@
 import { TableCell, TableRow, Typography } from "@mui/material"
 import { PropsWithChildren } from "react"
-import { CheckIn } from "../models/checkin"
+import { CheckIn } from "../models/Checkin"
 
 export const CheckInRow = ({ checkin, event_alias }: PropsWithChildren<{ checkin: CheckIn, event_alias: string }>) => {
   return (
