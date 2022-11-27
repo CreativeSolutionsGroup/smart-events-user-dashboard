@@ -9,7 +9,7 @@ function UserRewardDisplay({ user_rewards }: PropsWithChildren<{ user_rewards: A
   const handle_click = (reward: IReward) => {
     return () => {
       set_current_reward(reward);
-      set_show_reward_popup(true)
+      set_show_reward_popup(true);
     }
   }
 
