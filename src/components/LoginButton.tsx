@@ -26,7 +26,6 @@ const LoginButton = () => {
           } else {
             navigate("/register")
           }
-
         }}
         onError={() => {
           alert("Login Failed");
