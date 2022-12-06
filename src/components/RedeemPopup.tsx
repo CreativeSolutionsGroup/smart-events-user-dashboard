@@ -1,5 +1,5 @@
 import { BottomPaper } from "@creativesolutionsgroup/bottom-paper"
-import { Button, Paper, Typography } from "@mui/material"
+import { Button, Typography } from "@mui/material"
 import { PropsWithChildren, useCallback } from "react"
 import { loadFull } from "tsparticles";
 import Particles from "react-particles";
