@@ -6,16 +6,17 @@ import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
+import theme from "./theme";
+import { ThemeProvider } from '@emotion/react'
 import { GoogleOAuthProvider } from '@react-oauth/google'
 import axios from 'axios'
+
 import Dashboard from './views/Dashboard';
 import { LoginPage } from './views/LoginPage';
-import { Layout } from './components/Layout';
 import { RegisterPage } from './views/RegisterPage';
-import theme from "./theme";
-import { ThemeProvider } from '@emotion/react';
-import { Redirector } from './components/Redirector';
 import { StatsPage } from './views/StatsPage';
+
+import { Redirector } from './components/Redirector';
 
 const clientId = import.meta.env.VITE_CLIENT_ID ?? '8990298927-tftcl4kcfe52ikmu3quthlo7v3qvognu.apps.googleusercontent.com';
 
