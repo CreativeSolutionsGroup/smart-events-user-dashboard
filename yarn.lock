@@ -255,14 +255,14 @@
     to-fast-properties "^2.0.0"
 
 "@creativesolutionsgroup/bottom-paper@^0.1.2-8":
-  version "0.1.2-11"
-  resolved "https://registry.yarnpkg.com/@creativesolutionsgroup/bottom-paper/-/bottom-paper-0.1.2-11.tgz#aec274254590e25f8208f51742b68b64ba116ba3"
-  integrity sha512-5pBQzdpscQHzKrp4maKaFICLA/qwniuHpSvxB4vnYx2REnNGjNXOAylEXIKqg7T5Vd0CyfVTiI9V0MPcac4y5g==
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@creativesolutionsgroup/bottom-paper/-/bottom-paper-0.1.2.tgz#b76107a37d31c3826113747b35bac3a6e956a582"
+  integrity sha512-FK8ieTrtafk/a6hpGyk5hypHkbKAYVgNQoT+LIPhdZW30wyC9n2JI6F4Ib9Qe9JXFS3PcQM8SHozEPTXN9ZJcw==
   dependencies:
     "@react-spring/web" "^9.5.5"
+    "@use-gesture/react" "^10.2.22"
     react "^18.2.0"
     react-dom "^18.2.0"
-    react-swipeable "^7.0.0"
 
 "@emotion/babel-plugin@^11.10.0":
   version "11.10.2"
@@ -659,6 +659,18 @@
   version "0.16.2"
   resolved "https://registry.yarnpkg.com/@types/scheduler/-/scheduler-0.16.2.tgz#1a62f89525723dde24ba1b01b092bf5df8ad4d39"
   integrity sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==
+
+"@use-gesture/core@10.2.22":
+  version "10.2.22"
+  resolved "https://registry.yarnpkg.com/@use-gesture/core/-/core-10.2.22.tgz#90bd543b042e6c3a40a69ce8c2c38ecb67f43a2f"
+  integrity sha512-Ek0JZFYfk+hicLmoG094gm3YOuDMBNckHb988e59YOZoAkETT8dQSzT+g3QkSHSiP1m5wFXAGPSgxvOuwvGKHQ==
+
+"@use-gesture/react@^10.2.22":
+  version "10.2.22"
+  resolved "https://registry.yarnpkg.com/@use-gesture/react/-/react-10.2.22.tgz#2b8a39fe9bab83d73b112c8a5248b95099672c84"
+  integrity sha512-ECo7ig16SxBE06ENIURO1woKEB6TC8qY3a0rugJjQ2f1o0Tj28xS/eYNyJuqzQB5YT0q5IrF7ZFpbx1p/5ohYA==
+  dependencies:
+    "@use-gesture/core" "10.2.22"
 
 "@vitejs/plugin-react@^2.0.0":
   version "2.1.0"
@@ -1213,11 +1225,6 @@ react-router@6.4.0:
   integrity sha512-B+5bEXFlgR1XUdHYR6P94g299SjrfCBMmEDJNcFbpAyRH1j1748yt9NdDhW3++nw1lk3zQJ6aOO66zUx3KlTZg==
   dependencies:
     "@remix-run/router" "1.0.0"
-
-react-swipeable@^7.0.0:
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/react-swipeable/-/react-swipeable-7.0.0.tgz#7a12570ee435d35ac700511de338384aa78d12cd"
-  integrity sha512-NI7KGfQ6gwNFN0Hor3vytYW3iRfMMaivGEuxcADOOfBCx/kqwXE8IfHFxEcxSUkxCYf38COLKYd9EMYZghqaUA==
 
 react-transition-group@^4.4.5:
   version "4.4.5"
