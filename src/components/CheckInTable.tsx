@@ -1,6 +1,6 @@
 import { Table, TableBody, TableCell, TableHead, TableRow } from "@mui/material"
 import { useEffect, useState } from "react";
-import { CheckIn, Event } from "../models/checkin"
+import { CheckIn, Event } from "../models/Checkin"
 import { get_all_events } from "../services/CheckIn";
 import { CheckInRow } from "./CheckIn"
 

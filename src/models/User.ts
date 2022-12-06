@@ -12,3 +12,10 @@ export interface IUserReward {
   remaining_uses: number;
   date_earned: Date;
 }
+
+export interface IRewardTier {
+  name: string;
+  description: string;
+  color: string;
+  min_points: number;
+}

@@ -1,5 +1,5 @@
 import axios from "axios";
-import { CheckIn, Event } from "../models/checkin";
+import { CheckIn, Event } from "../models/Checkin";
 
 /**
  * 

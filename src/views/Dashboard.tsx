@@ -7,10 +7,16 @@ import { useState } from 'react';
 import { Layout } from '../components/Layout';
 import RankupDialog from '../components/RankupDialog';
 import RewardCard from '../components/RewardCard';
+import RewardsGraphic from '../components/RewardGraphic';
 import UserRewardDisplay from '../components/UserRewardDisplay';
-import { IReward, IUserReward } from '../models/User';
+import { IReward, IRewardTier, IUserReward } from '../models/User';
 
 const Dashboard = () => {
+  const [reward_tier, set_reward_tier] = useState({
+    name: "Gold",
+    color: "#FF9B39",
+
+  } as IRewardTier)
   const [rewards, set_rewards] = useState([
     {
       date_earned: new Date(),
@@ -56,8 +62,9 @@ const Dashboard = () => {
 
   return (
     <Layout>
-      <Box minWidth={350} width="50%" display="flex" flexDirection="column" mx="auto">
-        <Typography align="center" variant="h4">Rewards</Typography>
+      <Box minWidth={350} pt={8} width="50%" display="flex" flexDirection="column" mx="auto">
+        <RewardsGraphic reward_status={reward_tier.name} color={reward_tier.color} />
+        <Typography mt={5} align="center" variant="h4">Rewards</Typography>
         <UserRewardDisplay user_rewards={rewards} />
       </Box>
     </Layout>
