@@ -27,6 +27,6 @@ export const rankup = async () => {
   return await axios.post("/me/up");
 }
 
-export const getRewardTiers = async (): Promise<Array<IRewardTier>> => {
+export const get_all_reward_tiers = async (): Promise<Array<IRewardTier>> => {
   return await axios.get("/reward_tier");
 }
