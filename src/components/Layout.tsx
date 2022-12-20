@@ -26,8 +26,7 @@ export const Layout = ({ children }: PropsWithChildren) => {
     set_tiers(await get_all_reward_tiers());
   }
 
-  useEffect(() => { do_login_check() }, []);
-  useEffect(() => { get_reward_tiers() }, []);
+  useEffect(() => { do_login_check(); get_reward_tiers() }, []);
 
   return (
     <div>
