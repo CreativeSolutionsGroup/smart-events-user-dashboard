@@ -1,4 +1,5 @@
 import axios from "axios"
+import { IRewardTier } from "../models/User";
 
 export const register = async (student_id: string) => {
   await axios.post(`/user/${student_id}`);
@@ -24,4 +25,8 @@ export const check_login = async (): Promise<boolean> => {
 
 export const rankup = async () => {
   return await axios.post("/me/up");
+}
+
+export const get_all_reward_tiers = async (): Promise<Array<IRewardTier>> => {
+  return await axios.get("/reward_tier");
 }
