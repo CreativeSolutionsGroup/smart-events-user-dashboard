@@ -8,21 +8,6 @@ import { IReward } from "../models/User"
 interface PopupProps { reward: IReward, show?: boolean, onClose: Function };
 
 export const RedeemPopup = ({ reward, show, onClose }: PropsWithChildren<PopupProps>) => {
-  // The last Y scroll position.
-  // This helps us set the fixed position bug.
-  const [last_scroll, set_last_scroll] = useState(window.scrollY);
-
-  useEffect(() => {
-    let scroll = show ? window.scrollY : last_scroll;
-    set_last_scroll(scroll);
-    document.body.style.top = show ? `-${window.scrollY}px` : "";
-
-    document.body.style.position = show ? "fixed" : "";
-    document.body.style.overflow = show ? "hidden" : "scroll";
-    document.body.style.overscrollBehaviorY = show ? "none" : "";
-    !show && window.scrollTo(0, scroll);
-  }, [show])
-  
   const particles_init = useCallback(async (engine: any) => {
     await loadFull(engine);
   }, []);
