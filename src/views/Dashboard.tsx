@@ -3,13 +3,12 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import { Box, Typography } from '@mui/material';
-import { useState } from 'react';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 import { Layout } from '../components/Layout';
-import RankupDialog from '../components/RankupDialog';
-import RewardCard from '../components/RewardCard';
 import RewardsGraphic from '../components/RewardGraphic';
 import UserRewardDisplay from '../components/UserRewardDisplay';
-import { IReward, IRewardTier, IUserReward } from '../models/User';
+import { IReward, IRewardTier, IUserReward, MeDTO } from '../models/User';
 
 const Dashboard = () => {
   const [reward_tier, set_reward_tier] = useState({
@@ -59,6 +58,18 @@ const Dashboard = () => {
       } as IReward
     } as IUserReward
   ])
+
+  async function get_user_information() {
+    const user_information_request = await axios.get("/me");
+    const user_information: MeDTO = user_information_request.data;
+
+    set_rewards(user_information.rewards);
+    set_reward_tier(user_information.reward_tier);
+  }
+
+  useEffect(() => {
+    get_user_information();
+  }, [])
 
   return (
     <Layout>

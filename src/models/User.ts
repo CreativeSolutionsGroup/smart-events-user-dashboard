@@ -19,3 +19,9 @@ export interface IRewardTier {
   color: string;
   min_points: number;
 }
+
+export interface MeDTO {
+  points: number,
+  rewards: Array<IUserReward>
+  reward_tier: IRewardTier
+}
