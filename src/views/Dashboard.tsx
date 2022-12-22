@@ -8,7 +8,7 @@ import { useEffect, useState } from 'react';
 import { Layout } from '../components/Layout';
 import RewardsGraphic from '../components/RewardGraphic';
 import UserRewardDisplay from '../components/UserRewardDisplay';
-import { IReward, IRewardTier, IUserReward } from '../models/User';
+import { IReward, IRewardTier, IUserReward, MeDTO } from '../models/User';
 
 const Dashboard = () => {
   const [reward_tier, set_reward_tier] = useState({
@@ -59,23 +59,16 @@ const Dashboard = () => {
     } as IUserReward
   ])
 
-  async function get_user_rewards() {
-    const reward_request = await axios.get("/user_rewards");
-    const rewards: Array<IUserReward> = reward_request.data;
+  async function get_user_information() {
+    const user_information_request = await axios.get("/me");
+    const user_information: MeDTO = user_information_request.data;
 
-    set_rewards(rewards);
-  }
-
-  async function get_user_reward_tier() {
-    const reward_tier_request = await axios.get("/me");
-    const reward_tier: IRewardTier = reward_tier_request.data;
-
-    set_reward_tier(reward_tier);
+    set_rewards(user_information.rewards);
+    set_reward_tier(user_information.reward_tier);
   }
 
   useEffect(() => {
-    get_user_rewards();
-    get_user_reward_tier();
+    get_user_information();
   }, [])
 
   return (
