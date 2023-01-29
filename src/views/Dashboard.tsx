@@ -11,11 +11,7 @@ import UserRewardDisplay from '../components/UserRewardDisplay';
 import { IReward, IRewardTier, IUserReward, MeDTO } from '../models/User';
 
 const Dashboard = () => {
-  const [reward_tier, set_reward_tier] = useState({
-    name: "Gold",
-    color: "#FF9B39",
-
-  } as IRewardTier)
+  const [reward_tier, set_reward_tier] = useState({} as IRewardTier)
   const [rewards, set_rewards] = useState([
     {
       date_earned: new Date(),
@@ -74,9 +70,13 @@ const Dashboard = () => {
   return (
     <Layout>
       <Box minWidth={350} pt={8} width="50%" display="flex" flexDirection="column" mx="auto">
-        <RewardsGraphic reward_status={reward_tier.name} color={reward_tier.color} />
-        <Typography mt={5} align="center" variant="h4">Rewards</Typography>
-        <UserRewardDisplay user_rewards={rewards} />
+        {(reward_tier != undefined && reward_tier["name"] != undefined) ? (
+          <>
+            <RewardsGraphic reward_status={reward_tier.name} color={reward_tier.color} />
+            <Typography mt={5} align="center" variant="h4">Rewards</Typography>
+            <UserRewardDisplay user_rewards={rewards} />
+          </>
+        ) : null}
       </Box>
     </Layout>
   )
