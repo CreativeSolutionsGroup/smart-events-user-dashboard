@@ -36,7 +36,7 @@ export const Layout = ({ children }: PropsWithChildren) => {
         {children}
       </Box>
 
-      <BottomBar />
+      {/*<BottomBar />*/}
     </div>
   );
 }

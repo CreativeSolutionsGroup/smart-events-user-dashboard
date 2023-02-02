@@ -74,7 +74,7 @@ const Dashboard = () => {
           <>
             <RewardsGraphic reward_status={reward_tier.name} color={reward_tier.color} />
             <Typography mt={5} align="center" variant="h4">Rewards</Typography>
-            <UserRewardDisplay user_rewards={rewards} />
+            {/*<UserRewardDisplay user_rewards={rewards} />*/}
           </>
         ) : null}
       </Box>
