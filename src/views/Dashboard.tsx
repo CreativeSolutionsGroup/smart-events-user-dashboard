@@ -73,7 +73,7 @@ const Dashboard = () => {
   return (
     <Layout>
       <Box minWidth={350} pt={8} width="50%" display="flex" flexDirection="column" mx="auto">
-        <EventsAttended checkin_count={checkins} color="#FFD700"></EventsAttended>
+        <EventsAttended checkin_count={checkins} color="#FFD700" />
         {/* {(reward_tier != undefined && reward_tier["name"] != undefined) ? (
           <>
             <RewardsGraphic reward_status={reward_tier.name} color={reward_tier.color} />
