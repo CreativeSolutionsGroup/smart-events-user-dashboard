@@ -1,3 +1,4 @@
+import { Typography } from '@mui/material';
 import { GoogleLogin } from '@react-oauth/google';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
@@ -40,9 +41,12 @@ const LoginButton = () => {
     );
   }
   else {
+    setTimeout(() => navigate("/dashboard"), 1500)
+
     return (
       <div>
-        Already logged in.
+        <Typography textAlign={"center"}>Already logged in.</Typography>
+        <Typography textAlign={"center"}>Redirecting...</Typography>
       </div>
     );
   }
