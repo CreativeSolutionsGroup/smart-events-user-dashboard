@@ -3,8 +3,10 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import { Box, Typography } from '@mui/material';
+import { googleLogout } from '@react-oauth/google';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import EventsAttended from '../components/EventAttended';
 import { Layout } from '../components/Layout';
 import RewardsGraphic from '../components/RewardGraphic';
@@ -56,18 +58,19 @@ const Dashboard = () => {
       } as IReward
     } as IUserReward
   ])
+  const navigate = useNavigate();
 
   async function get_user_information() {
     const user_information_request = await axios.get("/me");
     const user_information: MeDTO = user_information_request.data;
-
+    
     set_rewards(user_information.rewards);
     set_reward_tier(user_information.reward_tier);
-    set_checkins(user_information.checkins.length)
+    set_checkins(user_information.checkins.length);
   }
 
   useEffect(() => {
-    get_user_information();
+    get_user_information()
   }, [])
 
   return (

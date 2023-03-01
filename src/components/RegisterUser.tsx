@@ -2,6 +2,7 @@ import { Button, Box, Grid, TextField, Card } from "@mui/material";
 import { useEffect, useState } from "react";
 import jwt_decode from "jwt-decode";
 import { register } from "../services/User";
+import { useNavigate } from "react-router-dom";
 
 const RegisterUser = () => {
 
@@ -13,6 +14,7 @@ const RegisterUser = () => {
   const [id_length, set_id_length] = useState<boolean>(false);
   const [confirm_id_helper, set_confirm_id_helper] = useState<string>("");
   const [id_helper, set_id_helper] = useState<string>("");
+  const navigate = useNavigate();
 
   const get_all_register_components = () => {
     try {
@@ -47,7 +49,10 @@ const RegisterUser = () => {
    */
   const enable_button = () => set_enable(id_match && id_length);
 
-  const send_register = async () => await register(stu_id);
+  const send_register = async () => {
+    await register(stu_id, decoded_token.email, decoded_token.name);
+    navigate("/dashboard");
+  }
 
   useEffect(() => { get_all_register_components() }, []);
   useEffect(() => { error_check() }, [stu_id, confirm_stu_id]);

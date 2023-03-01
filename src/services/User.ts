@@ -1,8 +1,8 @@
 import axios from "axios"
 import { IRewardTier } from "../models/User";
 
-export const register = async (student_id: string) => {
-  await axios.post(`/user/${student_id}`);
+export const register = async (student_id: string, email: string, name: string) => {
+  await axios.post(`/user/${student_id}`, { email, name });
 }
 
 /**
